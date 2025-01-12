@@ -1,0 +1,308 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C34504EE-1F5F-4B43-B08E-79D9EF552BF5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44329</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Sidebar.ascx" />
+    <Content Include="Customer\Pages\CustomerComponent.aspx" />
+    <Content Include="Customer\Pages\login.aspx" />
+    <Compile Include="Customer\Pages\CustomerComponent.aspx.cs">
+      <DependentUpon>CustomerComponent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Pages\CustomerComponent.aspx.designer.cs">
+      <DependentUpon>CustomerComponent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Pages\login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Pages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx.cs</DependentUpon>
+    </Compile>
+    <Content Include="index.aspx" />
+    <Content Include="Pages\account usage\AccountUsagePage.aspx" />
+    <Content Include="Pages\AverageTransactions\AverageTransactions.aspx" />
+    <Content Include="Pages\Cashbacks\Cashbacks.aspx" />
+    <Content Include="Pages\customer plans\CustomersWithPlans.aspx" />
+    <Content Include="Pages\Eshops\Eshops.aspx" />
+    <Content Include="Pages\Home\Home.aspx" />
+    <Content Include="Pages\Login\Login.aspx" />
+    <Content Include="Pages\MobileSearch\MobileSearch.aspx" />
+    <Content Include="Pages\PaymentPoints\PaymentPoints.aspx" />
+    <Content Include="Pages\Physical Stores\PhysicalStoresWithVouchers.aspx" />
+    <Content Include="Pages\PlanCashback\PlanCashback.aspx" />
+    <Content Include="Pages\remove benefits\RemoveBenefitsPage.aspx" />
+    <Content Include="Pages\resolved tickets\Resolved Tickets.aspx" />
+    <Content Include="Pages\SMS offers\ListSMSOffers.aspx" />
+    <Content Include="Pages\SubscriptionOnDate\CustomerAccountsSubscribedOnInputIdAndDate.aspx" />
+    <Content Include="Pages\Transactions\Transactions.aspx" />
+    <Content Include="Pages\UpdatePoints\UpdatePoints.aspx" />
+    <Content Include="Pages\Wallets\Wallets.aspx" />
+    <Content Include="Styles\site.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Sidebar.ascx.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Sidebar.ascx.designer.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\account usage\AccountUsagePage.aspx.cs">
+      <DependentUpon>AccountUsagePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\account usage\AccountUsagePage.aspx.designer.cs">
+      <DependentUpon>AccountUsagePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AverageTransactions\AverageTransactions.aspx.cs">
+      <DependentUpon>AverageTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AverageTransactions\AverageTransactions.aspx.designer.cs">
+      <DependentUpon>AverageTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cashbacks\Cashbacks.aspx.cs">
+      <DependentUpon>Cashbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cashbacks\Cashbacks.aspx.designer.cs">
+      <DependentUpon>Cashbacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\customer plans\CustomersWithPlans.aspx.cs">
+      <DependentUpon>CustomersWithPlans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\customer plans\CustomersWithPlans.aspx.designer.cs">
+      <DependentUpon>CustomersWithPlans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Eshops\Eshops.aspx.cs">
+      <DependentUpon>Eshops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Eshops\Eshops.aspx.designer.cs">
+      <DependentUpon>Eshops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MobileSearch\MobileSearch.aspx.cs">
+      <DependentUpon>MobileSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MobileSearch\MobileSearch.aspx.designer.cs">
+      <DependentUpon>MobileSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentPoints\PaymentPoints.aspx.cs">
+      <DependentUpon>PaymentPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PaymentPoints\PaymentPoints.aspx.designer.cs">
+      <DependentUpon>PaymentPoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Physical Stores\PhysicalStoresWithVouchers.aspx.cs">
+      <DependentUpon>PhysicalStoresWithVouchers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Physical Stores\PhysicalStoresWithVouchers.aspx.designer.cs">
+      <DependentUpon>PhysicalStoresWithVouchers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlanCashback\PlanCashback.aspx.cs">
+      <DependentUpon>PlanCashback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PlanCashback\PlanCashback.aspx.designer.cs">
+      <DependentUpon>PlanCashback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\remove benefits\RemoveBenefitsPage.aspx.cs">
+      <DependentUpon>RemoveBenefitsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\remove benefits\RemoveBenefitsPage.aspx.designer.cs">
+      <DependentUpon>RemoveBenefitsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\resolved tickets\Resolved Tickets.aspx.cs">
+      <DependentUpon>Resolved Tickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\resolved tickets\Resolved Tickets.aspx.designer.cs">
+      <DependentUpon>Resolved Tickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SMS offers\ListSMSOffers.aspx.cs">
+      <DependentUpon>ListSMSOffers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SMS offers\ListSMSOffers.aspx.designer.cs">
+      <DependentUpon>ListSMSOffers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SubscriptionOnDate\CustomerAccountsSubscribedOnInputIdAndDate.aspx.cs">
+      <DependentUpon>CustomerAccountsSubscribedOnInputIdAndDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubscriptionOnDate\CustomerAccountsSubscribedOnInputIdAndDate.aspx.designer.cs">
+      <DependentUpon>CustomerAccountsSubscribedOnInputIdAndDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transactions\Transactions.aspx.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Transactions\Transactions.aspx.designer.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdatePoints\UpdatePoints.aspx.cs">
+      <DependentUpon>UpdatePoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdatePoints\UpdatePoints.aspx.designer.cs">
+      <DependentUpon>UpdatePoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wallets\Wallets.aspx.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Wallets\Wallets.aspx.designer.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61823</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

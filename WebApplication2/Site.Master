@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication2.Site" %>
+<%@ Register TagPrefix="uc1" TagName="Sidebar" Src="~/Controls/Sidebar.ascx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title><asp:ContentPlaceHolder ID="title" runat="server" /></title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Added Roboto for Logo -->
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/site.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div id="sidebar">
+                <uc1:Sidebar ID="Sidebar" runat="server" />
+            </div>
+            <div id="contentArea">
+                <div class="headerContainer">
+                    <div>
+                    <asp:ContentPlaceHolder ID="Header" runat="server" />
+
+                    </div>
+                    <a href="/Pages/Login/Login.aspx" class="back-button">Logout</a>
+                    </div>
+                    <div class="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                     </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

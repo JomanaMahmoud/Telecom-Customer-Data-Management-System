@@ -1,0 +1,307 @@
+﻿/* Ensure body and html fill the entire height of the viewport */
+html,
+body {
+    height: 100%;
+    /* Ensure the page takes up the full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Overall page background color */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* Default light background */
+    color: #333;
+    /*    transition: background-color 0.3s ease, color 0.3s ease;*/
+}
+
+form,
+.container {
+    width: 100%;
+}
+
+.content {
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    color: #212121;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+/* Header styles */
+h2,
+h1 {
+    color: #212121;
+}
+
+/* Admin title styling */
+#adminTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0066cc;
+    margin: 20px 0;
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #00509e;
+}
+
+/* GridView styles */
+.grid-view {
+    width: 100%;
+    border-collapse: separate;
+    /* Separate to apply border radius */
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 15px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Apply rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+    /* Ensure that table columns evenly distribute the space */
+}
+
+.grid-view th,
+.grid-view td {
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.grid-view th {
+    background-color: #212121;
+    /* Dark blue header */
+    color: white;
+    word-wrap: normal;
+}
+
+.grid-view tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.grid-view tr:hover {
+    background-color: #e6f7ff;
+    /* Light blue background on hover */
+}
+
+
+.grid-view th {
+    background-color: #212121;
+    color: white;
+}
+
+.grid-view tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.grid-view tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Sidebar styles */
+#sidebar {
+    width: 300px;
+    background-color: #212121;
+    /* Nice blue shade */
+    padding: 20px;
+    height: 100%;
+    /* Full height of the page */
+    color: white;
+    position: fixed;
+    /* Fix the sidebar to the left side */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* Add vertical scrolling if needed */
+}
+/* Target the sidebar specifically -  replace #sidebar with your actual sidebar selector */
+#sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb (the draggable part) */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
+/* For Firefox */
+#sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1; /* Thumb color, track color */
+}
+/* Sidebar links */
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    margin: 15px 0;
+
+}
+
+    #sidebar li.active a {
+        /* Or any other styling you prefer */
+        background-color: #C2185B;
+        /* Light gray background */
+        color: #fff;
+        /* Darker text color for contrast */
+    }
+
+#sidebar i {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    font-style: normal;
+}
+
+/* Style the <i> tag within the active list item */
+#sidebar li.active i {
+    color: #E91E63;
+    /* Example using a pink color */
+}
+
+#sidebar a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#sidebar a:hover {
+    background-color: rgba(194, 24, 91, 0.5);
+    /* Darker blue for hover effect */
+}
+
+/* Content area styles */
+#contentArea {
+    margin-left: 300px;
+    /* Adjust content to the right of the sidebar */
+    padding: 20px;
+    background-color: #f4f8fb;
+    /* Light blue background for content */
+    color: #333;
+    width: -webkit-fill-available;
+}
+
+/* Container for the sidebar and content */
+.container {
+    display: flex;
+    height: 100%;
+    /* Full height */
+}
+
+/* Admin page title styles */
+#adminTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0066cc;
+    /* Blue color for the title */
+    margin: 20px;
+}
+
+/* Styling the form container */
+form {
+    margin: 0;
+}
+
+/* Sidebar and content container with a slight gap */
+.container > div {
+    margin: 0;
+}
+
+
+.input-field {
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    /* Space between fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    /* Responsive full width */
+}
+
+.action-button {
+    padding: 8px 15px;
+    background-color: #212121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 12px;
+}
+
+.action-button:hover {
+    background-color: #00509e;
+}
+
+.status-message {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff0000;
+    /* Red color for error messages */
+}
+
+.status-message.error {
+    color: red;
+}
+
+.status-message.success {
+    color: green;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
