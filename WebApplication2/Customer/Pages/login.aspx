@@ -42,7 +42,7 @@
 
         .login-container input[type="text"],
         .login-container input[type="password"] {
-            width: 100%;
+            width: calc(100% - 40px);
             padding: 12px;
             margin: 8px 0;
             border: 1px solid #ccc;
@@ -58,7 +58,7 @@
 
         .login-container input[type="submit"],
         .login-container .login-button {
-            width: 100%;
+            width: 60%;
             background-color: #2575fc;
             border: none;
             padding: 12px;
@@ -91,23 +91,24 @@
 <body>
     <form id="form1" runat="server">
         <div class="login-container">
-            <h2>Login to Your Account</h2>
+            <h2>Customer Login</h2>
             
             <!-- Mobile Number Field -->
             <label for="mnumber">Account Mobile Number:</label>
-            <asp:TextBox ID="mnumber" runat="server" placeholder="Enter your mobile number" type="text"></asp:TextBox>
+            <asp:TextBox ID="mnumber" runat="server" placeholder="Enter your Mobile Number" type="text"></asp:TextBox>
 
             <!-- Password Field -->
             <label for="password">Password:</label>
-            <asp:TextBox ID="password" runat="server" placeholder="Enter your password" type="password"></asp:TextBox>
+            <asp:TextBox ID="password" runat="server" placeholder="Enter your Password" type="password"></asp:TextBox>
 
             <!-- Login Button -->
+            <div>
             <asp:Button ID="buttonlogin" runat="server" onclick="loginm" Text="Login" CssClass="login-button" />
-
-       
-<div class="customer-login-link">
-    Are you a admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
-</div>
+            </div>
+            <br />
+            <div class="customer-login-link">
+                Are you a admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
+            </div>
     </form>
 </body>
 </html>

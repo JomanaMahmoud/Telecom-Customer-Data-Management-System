@@ -44,14 +44,14 @@
         .login-button {
             width: 60% !important; 
             background: #E91E63;
-            color: black;
-            padding: 5px;
+            color: white;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 10px;
-            font-weight: 500;
+            font-weight: bold;
         }
 
         .login-button:hover {
@@ -111,14 +111,14 @@
         <br />
         <input id="txtPassword" runat="server" type="password" placeholder="Enter Password" />
         <br />
-        <asp:Button ID="btnLogin" runat="server" CssClass="login-button" Text="LOGIN" OnClick="LoginButton" />
+        <asp:Button ID="btnLogin" runat="server" CssClass="login-button" Text="Login" OnClick="LoginButton" />
         <div>
         <asp:Label ID="lblError" runat="server" CssClass="error-message"></asp:Label>
         </div>
         
         <div class="customer-login-link">
-    Are you a customer? <a href="/Customer/Pages/login.aspx">Go to customer login</a>
-</div>
+        Are you a customer? <a href="/Customer/Pages/login.aspx">Go to customer login</a>
+        </div>
 
     </form>
 </body>

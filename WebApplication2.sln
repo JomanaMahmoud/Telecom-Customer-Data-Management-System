@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{C34504EE-1F5F-4B43-B08E-79D9EF552BF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telecom_Customer_Management_System", "WebApplication2\Telecom_Customer_Management_System.csproj", "{C34504EE-1F5F-4B43-B08E-79D9EF552BF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
