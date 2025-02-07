@@ -18,7 +18,7 @@ namespace Milestone_3
                 // Example input values, replace with actual inputs from user or session
                 MobileNo = Session["accountmn"] as String;
                 //int NationalID = 2; // Example NationalID
-                //string PlanName = "Premium Plan"; // Example PlanName
+                string PlanName = "Splan1"; // Example PlanName
 
                 //// ShowConsoleMessage("Retrieving all active benefits...");
                  ShowAllServicePlans(connStr);
@@ -31,7 +31,7 @@ namespace Milestone_3
                  //ShowUnresolvedTickets(connStr, NationalID);
 
                  //ShowConsoleMessage("Retrieving the highest voucher...");
-                 //ShowHighestVoucher(connStr, MobileNo);
+                 ShowHighestVoucher(connStr, MobileNo);
 
                  //ShowConsoleMessage("Retrieving remaining amount for the last payment...");
                  //ShowRemainingAmount(connStr, MobileNo, PlanName);
@@ -726,7 +726,7 @@ namespace Milestone_3
         protected void btnSubmit_RemainingExtraAmount(object sender, EventArgs e)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Milestone2DB_24"].ToString();
-            string PlanName = TextBoxNationalID.Text;
+            string PlanName = txtPlanName.Text;
             ShowRemainingAmount(connStr, MobileNo, PlanName);
             ShowExtraAmount(connStr, MobileNo, PlanName);
             ClearConsole();
