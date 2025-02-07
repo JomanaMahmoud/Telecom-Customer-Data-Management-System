@@ -17,33 +17,33 @@ namespace Milestone_3
                 string connStr = WebConfigurationManager.ConnectionStrings["Milestone2DB_24"].ToString();
                 // Example input values, replace with actual inputs from user or session
                 MobileNo = Session["accountmn"] as String;
-                int NationalID = 2; // Example NationalID
-                string PlanName = "Premium Plan"; // Example PlanName
+                //int NationalID = 2; // Example NationalID
+                //string PlanName = "Premium Plan"; // Example PlanName
 
                 //// ShowConsoleMessage("Retrieving all active benefits...");
-                // ShowAllServicePlans(connStr);
-                // ShowAllBenefits(connStr);
-                // ShowAllShops(connStr);
-                // ShowCompanyOfferedPlans(connStr, MobileNo);
-                // ShowUsagePlanCM(connStr, MobileNo);
-                // ShowSubscribedPlansFiveMonths(connStr, MobileNo);
-                // //ShowConsoleMessage("Retrieving unresolved technical support tickets...");
-                // ShowUnresolvedTickets(connStr, NationalID);
+                 ShowAllServicePlans(connStr);
+                 ShowAllBenefits(connStr);
+                 ShowAllShops(connStr);
+                 ShowCompanyOfferedPlans(connStr, MobileNo);
+                 ShowUsagePlanCM(connStr, MobileNo);
+                 ShowSubscribedPlansFiveMonths(connStr, MobileNo);
+                 //ShowConsoleMessage("Retrieving unresolved technical support tickets...");
+                 //ShowUnresolvedTickets(connStr, NationalID);
 
-                // //ShowConsoleMessage("Retrieving the highest voucher...");
-                // ShowHighestVoucher(connStr, MobileNo);
+                 //ShowConsoleMessage("Retrieving the highest voucher...");
+                 //ShowHighestVoucher(connStr, MobileNo);
 
-                // //ShowConsoleMessage("Retrieving remaining amount for the last payment...");
-                // ShowRemainingAmount(connStr, MobileNo, PlanName);
+                 //ShowConsoleMessage("Retrieving remaining amount for the last payment...");
+                 //ShowRemainingAmount(connStr, MobileNo, PlanName);
 
-                // //ShowConsoleMessage("Retrieving extra amount for the last payment...");
-                // ShowExtraAmount(connStr, MobileNo, PlanName);
+                 //ShowConsoleMessage("Retrieving extra amount for the last payment...");
+                 //ShowExtraAmount(connStr, MobileNo, PlanName);
 
-                // //ShowConsoleMessage("Retrieving top 10 successful payments...");
-                // ShowTopPayments(connStr, MobileNo);
-                ShowCashbackWalletCustomer(connStr,1234567);
-               // // Clear console when data is loaded
-               // //ClearConsole();
+                 //ShowConsoleMessage("Retrieving top 10 successful payments...");
+                 ShowTopPayments(connStr, MobileNo);
+                 //ShowCashbackWalletCustomer(connStr, 1234567);
+                 // Clear console when data is loaded
+                 //ClearConsole();
             }
         }
 
