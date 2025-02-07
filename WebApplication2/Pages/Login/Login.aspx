@@ -44,14 +44,14 @@
         .login-button {
             width: 60% !important; 
             background: #E91E63;
-            color: white;
-            padding: 12px;
             border: none;
-            border-radius: 5px;
+            padding: 12px;
+            color: white;
             font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
-            font-weight: bold;
         }
 
         .login-button:hover {
@@ -88,8 +88,8 @@
         
         .customer-login-link {
             margin-top: 10px;  
-            font-size: 14px;   
-            color: lightgrey;  
+            font-size: 17px;   
+            color: #606060;  
         }
 
         .customer-login-link a {
@@ -105,11 +105,9 @@
 <body>
     <form id="form1" runat="server" class="login-container">
         <h2>Admin Login</h2>
-        <asp:Label ID="LabelOfLogin" runat="server" Text="Enter AdminID and Password"></asp:Label>
+        <input id="txtUsername" runat="server" type="text" placeholder="AdminID" />
         <br />
-        <input id="txtUsername" runat="server" type="text" placeholder="Enter AdminID" />
-        <br />
-        <input id="txtPassword" runat="server" type="password" placeholder="Enter Password" />
+        <input id="txtPassword" runat="server" type="password" placeholder="Password" />
         <br />
         <asp:Button ID="btnLogin" runat="server" CssClass="login-button" Text="Login" OnClick="LoginButton" />
         <div>

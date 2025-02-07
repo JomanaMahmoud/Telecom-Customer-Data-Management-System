@@ -17,13 +17,12 @@
         }
 
         .login-container {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
             text-align: center;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
         }
 
         .login-container h2 {
@@ -58,8 +57,8 @@
 
         .login-container input[type="submit"],
         .login-container .login-button {
-            width: 60%;
-            background-color: #2575fc;
+            width: 60% !important; 
+            background: #2575fc;
             border: none;
             padding: 12px;
             color: white;
@@ -67,7 +66,7 @@
             font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            margin-top: 10px;
         }
 
         .login-container input[type="submit"]:hover,
@@ -86,20 +85,30 @@
             text-decoration: underline;
         }
 
+        .customer-login-link {
+            margin-top: 10px;  
+            font-size: 17px;   
+            color: #606060;  
+        }
+
+        .customer-login-link a {
+            color: #2575fc;   
+            text-decoration: none;
+        }
+
+        .customer-login-link a:hover {
+            text-decoration: underline; 
+        }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="login-container">
+    <form id="form1" runat="server" class="login-container">
             <h2>Customer Login</h2>
-            
             <!-- Mobile Number Field -->
-            <label for="mnumber">Account Mobile Number:</label>
-            <asp:TextBox ID="mnumber" runat="server" placeholder="Enter your Mobile Number" type="text"></asp:TextBox>
+            <asp:TextBox ID="mnumber" runat="server" placeholder="Mobile Number" type="text"></asp:TextBox>
 
             <!-- Password Field -->
-            <label for="password">Password:</label>
-            <asp:TextBox ID="password" runat="server" placeholder="Enter your Password" type="password"></asp:TextBox>
+            <asp:TextBox ID="password" runat="server" placeholder="Password" type="password"></asp:TextBox>
 
             <!-- Login Button -->
             <div>
@@ -107,8 +116,7 @@
             </div>
             <br />
             <div class="customer-login-link">
-                Are you a admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
-            </div>
+                Are you an admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
     </form>
 </body>
 </html>

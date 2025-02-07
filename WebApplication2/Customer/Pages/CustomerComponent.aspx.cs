@@ -20,30 +20,30 @@ namespace Milestone_3
                 int NationalID = 2; // Example NationalID
                 string PlanName = "Premium Plan"; // Example PlanName
 
-               // ShowConsoleMessage("Retrieving all active benefits...");
-                ShowAllServicePlans(connStr);
-                ShowAllBenefits(connStr);
-                ShowAllShops(connStr);
-                ShowCompanyOfferedPlans(connStr, MobileNo);
-                ShowUsagePlanCM(connStr, MobileNo);
-                ShowSubscribedPlansFiveMonths(connStr, MobileNo);
-                //ShowConsoleMessage("Retrieving unresolved technical support tickets...");
-                //ShowUnresolvedTickets(connStr, NationalID);
+                //// ShowConsoleMessage("Retrieving all active benefits...");
+                // ShowAllServicePlans(connStr);
+                // ShowAllBenefits(connStr);
+                // ShowAllShops(connStr);
+                // ShowCompanyOfferedPlans(connStr, MobileNo);
+                // ShowUsagePlanCM(connStr, MobileNo);
+                // ShowSubscribedPlansFiveMonths(connStr, MobileNo);
+                // //ShowConsoleMessage("Retrieving unresolved technical support tickets...");
+                // ShowUnresolvedTickets(connStr, NationalID);
 
-                //ShowConsoleMessage("Retrieving the highest voucher...");
-                ShowHighestVoucher(connStr, MobileNo);
+                // //ShowConsoleMessage("Retrieving the highest voucher...");
+                // ShowHighestVoucher(connStr, MobileNo);
 
-                //ShowConsoleMessage("Retrieving remaining amount for the last payment...");
-                //ShowRemainingAmount(connStr, MobileNo, PlanName);
+                // //ShowConsoleMessage("Retrieving remaining amount for the last payment...");
+                // ShowRemainingAmount(connStr, MobileNo, PlanName);
 
-                //ShowConsoleMessage("Retrieving extra amount for the last payment...");
-                //ShowExtraAmount(connStr, MobileNo, PlanName);
+                // //ShowConsoleMessage("Retrieving extra amount for the last payment...");
+                // ShowExtraAmount(connStr, MobileNo, PlanName);
 
-                //ShowConsoleMessage("Retrieving top 10 successful payments...");
-                ShowTopPayments(connStr, MobileNo);
-
-                // Clear console when data is loaded
-                //ClearConsole();
+                // //ShowConsoleMessage("Retrieving top 10 successful payments...");
+                // ShowTopPayments(connStr, MobileNo);
+                ShowCashbackWalletCustomer(connStr,1234567);
+               // // Clear console when data is loaded
+               // //ClearConsole();
             }
         }
 
@@ -620,6 +620,7 @@ namespace Milestone_3
 
                     tableHtml += "</tbody></table>";
                     lblCashbackStatus.Text = tableHtml != "<table class='styled-table sortable'><thead><tr><th>Cashback ID</th><th>Benefit ID</th><th>Wallet ID</th><th>Amount</th><th>Credit Date</th></tr></thead><tbody></tbody></table>" ? tableHtml : "<div class='error'>No cashback transaction found related to this wallet.</div>";
+                    
                 }
                 catch (Exception ex)
                 {

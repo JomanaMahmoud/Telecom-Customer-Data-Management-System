@@ -288,7 +288,7 @@
         /* Styled Button */
         .styled-button {
             display: flex;
-            width: 170px;
+            width: 180px;
             padding: 10px;
             font-size: 16px;
             color: #fff;
@@ -486,12 +486,10 @@
      </div>
             <div id ="recharge-balance" class="content">
                  <h2>Recharge Balance</h2>
-                <br />
                 <div>
                     <h3>Amount:</h3>
                     <asp:TextBox ID="txtRechargeAmount" runat="server" CssClass="styled-textbox" placeholder="Enter Amount"></asp:TextBox>
                 </div>
-                <br />
                 <div>
                     <h3>Payment Method:</h3>
                     <asp:DropDownList ID="ddlPaymentMethod" runat="server" CssClass="styled-dropdown">
@@ -514,17 +512,14 @@
            </div>
            <div id="renew-subscription" class="content">
             <h2>Renew Subscription</h2>
-                <br />
                 <div>
                     <h3>Plan ID:</h3>
                     <asp:TextBox ID="txtPlanID" runat="server" CssClass="styled-textbox" placeholder="Enter your Plan ID"></asp:TextBox>
                 </div>
-                <br />
                 <div>
                     <h3>Amount:</h3>
                     <asp:TextBox ID="txtRenewAmount" runat="server" CssClass="styled-textbox" placeholder="Enter Amount"></asp:TextBox>
                 </div>
-                <br />
                 <div>
                     <h3>Payment Method:</h3>
                     <asp:DropDownList ID="ddlRenewPaymentMethod" runat="server" CssClass="styled-dropdown">
@@ -533,7 +528,7 @@
                         <asp:ListItem Text="Cash" Value="cash" />
                     </asp:DropDownList>
                 </div>
-                <br />
+               <br />
                 <asp:Button ID="btnSubmitRenewSubscription" runat="server" Text="Renew Subscription" OnClick="RenewSubscription_Click" CssClass="styled-button" />
 
         </div> 
