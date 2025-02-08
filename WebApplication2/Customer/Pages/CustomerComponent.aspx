@@ -603,6 +603,7 @@
         }
 
         // Dark Mode Toggle
+        // Dark Mode Toggle
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
@@ -612,10 +613,25 @@
             const icon = document.getElementById('modeIcon');
             if (body.classList.contains('dark-mode')) {
                 icon.src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
+                localStorage.setItem('darkMode', 'true'); // Save dark mode state
             } else {
                 icon.src = "https://img.icons8.com/?size=100&id=59841&format=png&color=FFFFFF"; // Half Moon for dark mode
+                localStorage.removeItem('darkMode'); // Remove dark mode state
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if dark mode is enabled in localStorage
+            if (localStorage.getItem("darkMode") === "true") {
+                document.body.classList.add("dark-mode");
+                document.body.classList.remove("light-mode");
+                document.getElementById('modeIcon').src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
+            } else {
+                document.body.classList.add("light-mode");
+                document.body.classList.remove("dark-mode");
+                document.getElementById('modeIcon').src = "https://img.icons8.com/?size=100&id=59841&format=png&color=FFFFFF"; // Half Moon for dark mode
+            }
+        });
         // Sortable Table Functionality
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.styled-table th').forEach(function (th) {
