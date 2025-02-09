@@ -412,7 +412,7 @@
             <a href="#" onclick="showSection('unresolvedTickets')">Unresolved Tickets</a>
             <a href="#" onclick="showSection('remainingExtraAmount')">Remaining & Extra Amounts</a>
             <a href="mailto:yehiarasheed@gmail.com"> Support</a>
-            <a href="login.aspx" >Log Out</a>
+            <a href="login.aspx" onclick="logout()">Log Out</a>
             
         </div>
         <!-- Dark Mode Toggle Button -->
@@ -669,6 +669,16 @@
             const activeSection = localStorage.getItem('activeSection') || 'servicePlans';
             showSection(activeSection);
         });
+
+        function logout() {
+            // Clear the active section
+            localStorage.removeItem('activeSection');
+
+            // Proceed with your existing logout logic
+            // Example: Redirect to login page
+            window.location.href = 'login.aspx';
+        }
+
     </script>
 </body>
 </html>
