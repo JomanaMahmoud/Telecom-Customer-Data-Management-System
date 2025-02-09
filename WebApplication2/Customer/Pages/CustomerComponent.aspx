@@ -475,9 +475,13 @@
      <div id="sms-minutes-internet" class="content">
          <h2>SMS, Minutes, and Internet Consumption</h2>
          <form id="form1" runat="server">
-         
+         <h3>Enter Plan Name: </h3>
          <asp:TextBox ID="planName" runat="server" placeholder="Enter Plan Name" CssClass="styled-textbox"></asp:TextBox>
+         <br />
+         <h3>Enter Start Date: </h3>
          <asp:TextBox ID="startDate" runat="server" TextMode="Date" placeholder="Start Date" CssClass="styled-textbox"></asp:TextBox>
+         <br />
+         <h3>Enter End Date: </h3>
          <asp:TextBox ID="endDate" runat="server" TextMode="Date" placeholder="End Date" CssClass="styled-textbox"></asp:TextBox>
          <asp:Label ID="lblSMS" runat="server"></asp:Label>
          <asp:Label ID="lblMins" runat="server"></asp:Label>
