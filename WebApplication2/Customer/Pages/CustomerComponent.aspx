@@ -600,9 +600,12 @@
         function showSection(id) {
             document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
             document.getElementById(id).style.display = 'block';
+    
+            // Save the current section to localStorage
+            localStorage.setItem('activeSection', id);
         }
 
-        // Dark Mode Toggle
+
         // Dark Mode Toggle
         function toggleDarkMode() {
             const body = document.body;
@@ -662,7 +665,10 @@
             });
         });
 
-        window.onload = () => showSection('servicePlans');
+        document.addEventListener("DOMContentLoaded", function () {
+            const activeSection = localStorage.getItem('activeSection') || 'servicePlans';
+            showSection(activeSection);
+        });
     </script>
 </body>
 </html>
