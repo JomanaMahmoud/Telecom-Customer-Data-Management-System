@@ -75,3 +75,4 @@ This project is licensed under the MIT License.
 ## Contact
 For any inquiries or feature requests, feel free to reach out via GitHub Issues.
 
+---
