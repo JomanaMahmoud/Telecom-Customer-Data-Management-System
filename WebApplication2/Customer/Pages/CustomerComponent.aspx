@@ -175,6 +175,7 @@
             text-align: center;
             display: inline-block;
             margin-bottom: 20px;
+            margin-right:  15px;
             font-weight:500;
         }
             .dark-mode .number-box {
@@ -272,6 +273,10 @@
         .styled-textbox:focus {
             border-color: #0078d4;
             box-shadow: 0 0 5px rgba(0, 120, 212, 0.5);
+        }
+
+        .dark-mode .styled-textbox {
+        color-scheme: dark;
         }
 
         body.dark-mode .styled-textbox {
@@ -483,6 +488,7 @@
          <br />
          <h3>Enter End Date: </h3>
          <asp:TextBox ID="endDate" runat="server" TextMode="Date" placeholder="End Date" CssClass="styled-textbox"></asp:TextBox>
+         <br />
          <asp:Label ID="lblSMS" runat="server"></asp:Label>
          <asp:Label ID="lblMins" runat="server"></asp:Label>
          <asp:Label ID="lblInt" runat="server"></asp:Label>
