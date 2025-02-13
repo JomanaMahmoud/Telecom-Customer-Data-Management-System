@@ -25,14 +25,14 @@
             width: 300px;
         }
         .login-container h2 {
-            margin-bottom: 20px;
             color: #333;
             font-size: 24px;
+            margin-bottom: 30px;
         }
         .login-container input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin: 10px 0;
+            width: calc(100% - 40px);
+            padding: 12px;
+            margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;

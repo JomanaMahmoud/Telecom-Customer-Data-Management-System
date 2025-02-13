@@ -51,8 +51,8 @@
 
         .login-container input[type="text"]:focus,
         .login-container input[type="password"]:focus {
-            border-color: #2575fc;
             outline: none;
+            border-color: #2575fc;
         }
 
         .login-container input[type="submit"],
