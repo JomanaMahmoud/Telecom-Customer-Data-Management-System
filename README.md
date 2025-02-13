@@ -1,6 +1,6 @@
 # Telecom Customer Data Management System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](telecom-customer-app-azcycacucphyach6.italynorth-01.azurewebsites.net)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://telecom-customer-app-azcycacucphyach6.italynorth-01.azurewebsites.net/)
 
 ## Project Description
 The Telecom Customer Data Management System is a comprehensive solution for managing customer data, subscriptions, payments, and service plans for a telecom company. It provides an intuitive digital experience for customers, ensuring efficient data retrieval and service customization.
