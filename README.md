@@ -1,19 +1,65 @@
-## Project: Telecom Customer Data Management System
+# Telecom Customer Data Management System
 
-### Overview
-The **Telecom Customer Data Management System** aims to design and implement an extensive customer data management solution for a telecom company. This system manages subscriber information, payment details, and service usage, providing customers with a seamless and personalized digital experience. It is designed to streamline various customer interactions, enhance satisfaction, and foster loyalty.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](PLACEHOLDER_FOR_DEPLOYED_LINK)
 
-### Features
-The database will store essential information, including:
-- **Customer Profiles**: Personal details such as national ID, name, email, address, and date of birth.
-- **Customer Accounts**: Tied to unique mobile numbers with information like balance, account type, start date, status, and points earned.
-- **Service Plans**: Details of subscribed plans, usage patterns, and service features like SMS, minutes, and mobile internet.
-- **Plan Usage**: Monitoring of calls, SMS, and data usage to provide insights for customers.
-- **Payments**: Record of all transactions, including recharges and payment history.
-- **Wallet**: Facilitates seamless money transfers between users with real-time processing and insights into financial behavior.
-- **Benefits**: Various advantages offered to accounts, including points, cashback, and exclusive offers.
-- **Vouchers**: Shopping tools redeemable with accumulated points.
-- **Shops**: Both physical stores and e-shops where vouchers can be redeemed.
-- **Technical Support Tickets**: Tracking issues related to services or network performance.
+## Project Description
+The Telecom Customer Data Management System is a comprehensive solution for managing customer data, subscriptions, payments, and service plans for a telecom company. It provides an intuitive digital experience for customers, ensuring efficient data retrieval and service customization.
 
----
+## Screenshots
+![Screenshot 1](PLACEHOLDER_FOR_SCREENSHOT_1)
+![Screenshot 2](PLACEHOLDER_FOR_SCREENSHOT_2)
+
+## Features
+- Customer Profile Management: Stores personal details like name, national ID, email, and address.
+- Customer Account Handling: Each mobile number is tied to a unique account with balance tracking.
+- Service Plan Subscription: Customers can subscribe to different plans with SMS, minutes, and data options.
+- Plan Usage Monitoring: Tracks calls, SMS, and data consumption for each account.
+- Payments & Wallet Transactions: Records all financial transactions including recharges and plan payments.
+- Benefit & Voucher System: Customers earn points, receive cashback, and redeem vouchers at shops.
+- Technical Support Ticketing: Customers can raise tickets for service-related issues.
+
+## Technologies Used
+- Frontend: HTML, CSS, JavaScript
+- Backend: ASP.NET (C#)
+- Database: SQL Server
+
+## Project Structure
+```
+Telecom-Customer-Data-Management-System/
+│-- WebApplication2/
+│   ├── Customer/
+│   ├── Admin/
+│   ├── Database/
+│   ├── Services/
+│   └── Pages/
+│-- README.md
+│-- LICENSE
+```
+
+## Installation & Setup
+### Prerequisites
+- Visual Studio (Latest version recommended)
+- SQL Server
+- .NET Framework
+
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yehiarasheed/Telecom-Customer-Data-Management-System.git
+   ```
+2. Open **Visual Studio** and load the project.
+3. Set up the database:
+   - Open **SQL Server Management Studio**.
+   - Execute the provided database schema script to create the required tables.
+   - Update the connection string in the configuration file if necessary.
+4. Build and run the project:
+   - In Visual Studio, select **Debug > Start Without Debugging**.
+   - The application should launch in your default web browser.
+5. Access the deployed website (if applicable) through the provided link.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any inquiries or feature requests, feel free to reach out via GitHub Issues.
+
