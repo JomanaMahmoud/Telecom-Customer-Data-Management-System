@@ -57,6 +57,18 @@ Telecom-Customer-Data-Management-System/
    - The application should launch in your default web browser.
 5. Access the deployed website (if applicable) through the provided link.
 
+## Contributing
+We appreciate your interest in contributing to this project! Whether it's fixing bugs, adding features, or improving documentation, your contributions are valuable.
+
+For detailed contribution guidelines, please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+### How to Contribute
+- **Submit a Pull Request:** If you've made changes that you believe will benefit the project, submit a pull request on GitHub.
+- **Review Process:** All contributions will be reviewed by the project maintainers. Feedback will be provided, and once everything meets the project's requirements, your changes will be merged.
+- **Project Discretion:** Contributions will be incorporated at the discretion of the project maintainers. Every contribution is valued, and we will do our best to include your work if it aligns with the project's goals.
+
+Thank you for helping improve this project!
+
 ## License
 This project is licensed under the MIT License.
 
