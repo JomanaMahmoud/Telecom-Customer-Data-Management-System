@@ -47,15 +47,16 @@ Telecom-Customer-Data-Management-System/
    ```sh
    git clone https://github.com/yehiarasheed/Telecom-Customer-Data-Management-System.git
    ```
-2. Open **Visual Studio** and load the project.
-3. Set up the database:
+2. Open **Visual Studio**.
+3. In Visual Studio, open the project by selecting **WebApplication2.sln** from the Solution Explorer.
+4. Set up the database:
    - Open **SQL Server Management Studio**.
    - Execute the provided database schema script to create the required tables.
    - Update the connection string in the configuration file if necessary.
-4. Build and run the project:
+5. Build and run the project:
    - In Visual Studio, select **Debug > Start Without Debugging**.
    - The application should launch in your default web browser.
-5. Access the deployed website (if applicable) through the provided link.
+6. Access the deployed website (if applicable) through the provided link.
 
 ## Contributing
 We appreciate your interest in contributing to this project! Whether it's fixing bugs, adding features, or improving documentation, your contributions are valuable.
@@ -75,4 +76,3 @@ This project is licensed under the MIT License.
 ## Contact
 For any inquiries or feature requests, feel free to reach out via GitHub Issues.
 
----
