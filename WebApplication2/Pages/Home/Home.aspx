@@ -3,7 +3,7 @@
     Admin Page
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Header" runat="server">
-    <h1>Welcome to the Admin Page </h1>
+    <h1>Welcome to the Admin Portal </h1>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

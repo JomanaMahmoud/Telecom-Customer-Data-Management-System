@@ -178,7 +178,7 @@
             margin-right:  15px;
             font-weight:500;
         }
-            .dark-mode .number-box {
+        .dark-mode .number-box {
             background-color: #4fa3d1;
             color: black;
             padding: 15px 20px;
@@ -258,7 +258,7 @@
             color:black;
         }
 
-                /* Styled TextBox */
+        /* Styled TextBox */
         .styled-textbox {
             width: 300px;
             padding: 10px;
