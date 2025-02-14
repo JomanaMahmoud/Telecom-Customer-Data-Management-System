@@ -6,9 +6,11 @@
 The Telecom Customer Data Management System is a comprehensive solution for managing customer data, subscriptions, payments, and service plans for a telecom company. It provides an intuitive digital experience for customers, ensuring efficient data retrieval and service customization.
 
 ## Screenshots
+### Admin Portal
 ![Screenshot 2025-02-14 191006](https://github.com/user-attachments/assets/0be6e8fa-0dd4-477c-b310-05a38b7bbbbe)
-![Screenshot 2025-02-14 191333](https://github.com/user-attachments/assets/9dfe7469-ddfb-4054-b34b-d6e45e73fba4)
 ![Screenshot 2025-02-14 191233](https://github.com/user-attachments/assets/325945bc-b402-46fd-812f-543bde7e2aa4)
+### Customer Portal
+![Screenshot 2025-02-14 191333](https://github.com/user-attachments/assets/9dfe7469-ddfb-4054-b34b-d6e45e73fba4)
 ![Screenshot 2025-02-14 191205](https://github.com/user-attachments/assets/996bc877-fdd5-4812-932f-295985644075)
 ![Screenshot 2025-02-14 191148](https://github.com/user-attachments/assets/055e4b6b-8845-4b52-9d4b-ae5ebbc5e8cb)
 
