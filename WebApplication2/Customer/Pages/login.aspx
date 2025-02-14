@@ -85,6 +85,12 @@
             text-decoration: underline;
         }
 
+        .error-message {
+            color: #6a11cb;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
         .customer-login-link {
             margin-top: 10px;  
             font-size: 17px;   
@@ -115,6 +121,9 @@
             <asp:Button ID="buttonlogin" runat="server" onclick="loginm" Text="Login" CssClass="login-button" />
             </div>
             <br />
+            <div>
+            <asp:Label ID="lblError" runat="server" CssClass="error-message"></asp:Label>
+            </div>
             <div class="customer-login-link">
                 Are you an admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
     </form>

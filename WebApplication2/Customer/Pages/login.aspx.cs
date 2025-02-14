@@ -40,7 +40,8 @@ namespace WebApplication2
             // Validate inputs
             if (string.IsNullOrEmpty(accountmn) || string.IsNullOrEmpty(pass))
             {
-                Response.Write("<script>alert('Please fill in all fields.');</script>");
+                lblError.Text = "Empty Fields found. Please fill in all fields.";
+                password.Text = "";
                 return;
             }
 
@@ -74,8 +75,8 @@ namespace WebApplication2
                 }
                 else
                 {
-                    // Login failed
-                    Response.Write("<script>alert('Invalid mobile number or password.');</script>");
+                    lblError.Text = "These are invalid customer credentials. Please try again.";
+                    password.Text = "";
                 }
             }
             catch (Exception ex)

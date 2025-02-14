@@ -23,7 +23,16 @@ namespace WebApplication2.Pages.Login
             }
             else
             {
-                lblError.Text = "These are not valid admin credentials. Please try again.";
+                if (string.IsNullOrEmpty(txtUsername.Value) || string.IsNullOrEmpty(txtPassword.Value))
+                {
+                    lblError.Text = "Empty Fields found. Please fill in all fields.";
+                    txtPassword.Value = "";
+                    return;
+                }
+                else
+                {
+                    lblError.Text = "These are invalid admin credentials. Please try again.";
+                }
             }
         }
     }
