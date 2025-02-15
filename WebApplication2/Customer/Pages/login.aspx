@@ -118,6 +118,7 @@
             padding: 20px;
             z-index: 1000;
             display: none; /* Initially hidden */
+            color: #000;
         }
 
         .hint-popup-content {
