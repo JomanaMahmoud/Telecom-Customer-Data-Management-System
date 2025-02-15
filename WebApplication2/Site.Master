@@ -7,12 +7,26 @@
     <meta charset="UTF-8">
     <title><asp:ContentPlaceHolder ID="title" runat="server" /></title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Added Roboto for Logo -->
-      <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="~/Styles/site.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar) {
+                // Restore scroll position
+                var scrollPosition = localStorage.getItem("sidebarScrollPosition");
+                if (scrollPosition) {
+                    sidebar.scrollTop = scrollPosition;
+                }
+
+                // Save scroll position
+                sidebar.addEventListener("scroll", function() {
+                    localStorage.setItem("sidebarScrollPosition", sidebar.scrollTop);
+                });
+            }
+        });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,14 +37,13 @@
             <div id="contentArea">
                 <div class="headerContainer">
                     <div>
-                    <asp:ContentPlaceHolder ID="Header" runat="server" />
-
+                        <asp:ContentPlaceHolder ID="Header" runat="server" />
                     </div>
                     <a href="/Pages/Login/Login.aspx" class="back-button">Logout</a>
-                    </div>
-                    <div class="content">
-                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-                     </div>
+                </div>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
             </div>
         </div>
     </form>
