@@ -8,7 +8,7 @@ The Telecom Customer Data Management System is a comprehensive solution for mana
 ## Screenshots
 ### Admin Portal
 ![Screenshot 2025-02-14 191006](https://github.com/user-attachments/assets/0be6e8fa-0dd4-477c-b310-05a38b7bbbbe)
-![Screenshot 2025-02-14 191233](https://github.com/user-attachments/assets/325945bc-b402-46fd-812f-543bde7e2aa4)
+![Screenshot 2025-02-15 194317](https://github.com/user-attachments/assets/a478ddc2-d006-4057-b6bf-89d792ac6492)
 ### Customer Portal
 ![Screenshot 2025-02-14 191333](https://github.com/user-attachments/assets/9dfe7469-ddfb-4054-b34b-d6e45e73fba4)
 ![Screenshot 2025-02-14 191205](https://github.com/user-attachments/assets/996bc877-fdd5-4812-932f-295985644075)
