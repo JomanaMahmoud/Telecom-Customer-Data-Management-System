@@ -259,7 +259,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site.Master" />
-    <None Include="Properties\PublishProfiles\telecom-customer-app - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

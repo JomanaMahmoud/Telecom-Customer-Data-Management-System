@@ -437,21 +437,6 @@
             color: #ff0000;
         }
 
-        /* Dark mode styles for hint-popup */
-        .dark-mode .hint-popup {
-            background-color: #2b2b2b;
-            border: 1px solid #555;
-            color: #f0f0f0;
-        }
-
-        .dark-mode .hint-popup .close-btn {
-            color: #f0f0f0;
-        }
-
-        .dark-mode .hint-popup .close-btn:hover {
-            color: #ff0000;
-        }
-
     </style>
 </head>
 <body class="light-mode">
