@@ -105,6 +105,38 @@
         .customer-login-link a:hover {
             text-decoration: underline; 
         }
+
+        .hint-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+        }
+
+        .hint-popup-content {
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            color: #ff0000;
+        }
+
     </style>
 </head>
 <body>
@@ -127,5 +159,33 @@
             <div class="customer-login-link">
                 Are you an admin? <a href="/Pages/Login/Login.aspx">Go to admin login</a>
     </form>
+
+    <div id="hintPopup" class="hint-popup">
+        <div class="hint-popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p><strong>Hint:</strong> Use Mobile Number: <em>01234567890</em> and Password: <em>pass</em> to log in.</p>
+        </div>
+    </div>
+
 </body>
+<script>
+    // Function to show the pop-up
+    function showPopup() {
+        document.getElementById('hintPopup').style.display = 'block';
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+        document.getElementById('hintPopup').style.display = 'none';
+        sessionStorage.setItem('closedCustomerLogin', 'true');
+    }
+
+    // Show the pop-up when the page loads
+    window.onload = function () {
+        // Check if the user is visiting for the first time in this session
+        if (!sessionStorage.getItem('closedCustomerLogin')) {
+            showPopup();
+        }
+    }
+</script>
 </html>

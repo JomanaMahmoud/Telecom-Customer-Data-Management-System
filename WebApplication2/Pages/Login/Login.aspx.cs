@@ -17,7 +17,7 @@ namespace WebApplication2.Pages.Login
             string password = txtPassword.Value;
            
 
-            if ((username == "58-1034" && password == "1234") || (username == "58-25160" && password=="1234"))
+            if ((username == "58-1034" && password == "1234") || (username == "58-25160" && password == "1234") || (username == "58-12345" && password == "admin"))
             {
                 Response.Redirect("/Pages/Home/Home.aspx");
             }

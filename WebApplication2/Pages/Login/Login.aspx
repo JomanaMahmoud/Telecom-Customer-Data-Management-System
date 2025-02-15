@@ -100,6 +100,38 @@
         .customer-login-link a:hover {
             text-decoration: underline; 
         }
+
+        .hint-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+        }
+
+        .hint-popup-content {
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 17px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            color: #ff0000;
+        }
+
     </style>
 </head>
 <body>
@@ -118,6 +150,32 @@
         Are you a customer? <a href="/Customer/Pages/login.aspx">Go to customer login</a>
         </div>
 
+        <div id="hintPopup" class="hint-popup">
+            <div class="hint-popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p><strong>Hint:</strong> Use Admin ID: <em>58-12345</em> and Password: <em>admin</em> to log in.</p>
+            </div>
+        </div>
     </form>
 </body>
+<script>
+    // Function to show the pop-up
+    function showPopup() {
+        document.getElementById('hintPopup').style.display = 'block';
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+        document.getElementById('hintPopup').style.display = 'none';
+        sessionStorage.setItem('closedAdmin', 'true');
+    }
+
+    // Show the pop-up when the page loads
+    window.onload = function () {
+        // Check if the user is visiting for the first time in this session
+        if (!sessionStorage.getItem('closedAdmin')) {
+            showPopup();
+        }
+    }
+</script>
 </html>
