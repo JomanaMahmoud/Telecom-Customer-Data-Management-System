@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebApplication2.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Admin Page
+    Admin Portal
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Header" runat="server">
     <h1>Welcome to the Admin Portal </h1>
