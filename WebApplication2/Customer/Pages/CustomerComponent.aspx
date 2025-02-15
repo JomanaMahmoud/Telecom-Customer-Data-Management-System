@@ -609,6 +609,7 @@
         <asp:Label ID="lblCashbackStatus" runat="server"></asp:Label>
     </div>
      <div class="content" id="remainingExtraAmount">
+         <h2>View Remaining And Extra Amounts</h2>
          <h3>Enter Plan Name</h3>
         <asp:TextBox ID="txtPlanName" runat="server" Placeholder="Enter Plan Name" CssClass="styled-textbox"></asp:TextBox>
          <asp:Button ID="ButtonRemainingExtraAmount" runat="server" Text="Submit" CssClass="styled-button" OnClick="btnSubmit_RemainingExtraAmount" />
