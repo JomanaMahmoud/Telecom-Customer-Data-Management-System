@@ -85,6 +85,7 @@
       <DependentUpon>login.aspx.cs</DependentUpon>
     </Compile>
     <Content Include="index.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="Pages\account usage\AccountUsagePage.aspx" />
     <Content Include="Pages\AverageTransactions\AverageTransactions.aspx" />
     <Content Include="Pages\Cashbacks\Cashbacks.aspx" />
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\account usage\AccountUsagePage.aspx.cs">
       <DependentUpon>AccountUsagePage.aspx</DependentUpon>
