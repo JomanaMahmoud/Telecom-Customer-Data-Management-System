@@ -737,6 +737,7 @@
 
         function logout() {
             // Clear the session variable
+            localStorage.removeItem('activeSection');
             sessionStorage.clear();
             // Send a POST request to the logout endpoint
             fetch('logout.aspx', { method: 'POST' })
