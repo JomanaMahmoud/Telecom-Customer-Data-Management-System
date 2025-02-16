@@ -460,7 +460,7 @@
             <a href="#" onclick="showSection('unresolvedTickets')">Unresolved Tickets</a>
             <a href="#" onclick="showSection('remainingExtraAmount')">Remaining & Extra Amounts</a>
             <a href="mailto:yehiarasheed@gmail.com"> Support</a>
-            <a href="login.aspx" onclick="logout()">Log Out</a>
+            <a href="/Customer/Pages/login.aspx" class="back-button" onclick="clearDarkModeState(); logout();">Log Out</a>
             
         </div>
         <!-- Dark Mode Toggle Button -->
@@ -664,22 +664,21 @@
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
-            body.classList.toggle('light-mode');
 
             // Change the mode icon
             const icon = document.getElementById('modeIcon');
             if (body.classList.contains('dark-mode')) {
                 icon.src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
-                localStorage.setItem('darkMode', 'true'); // Save dark mode state
+                sessionStorage.setItem('darkMode', 'true'); // Save dark mode state
             } else {
                 icon.src = "https://img.icons8.com/?size=100&id=59841&format=png&color=FFFFFF"; // Half Moon for dark mode
-                localStorage.removeItem('darkMode'); // Remove dark mode state
+                sessionStorage.removeItem('darkMode'); // Remove dark mode state
             }
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            // Check if dark mode is enabled in localStorage
-            if (localStorage.getItem("darkMode") === "true") {
+            // Check if dark mode is enabled in sessionStorage
+            if (sessionStorage.getItem("darkMode") === "true") {
                 document.body.classList.add("dark-mode");
                 document.body.classList.remove("light-mode");
                 document.getElementById('modeIcon').src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
@@ -689,6 +688,18 @@
                 document.getElementById('modeIcon').src = "https://img.icons8.com/?size=100&id=59841&format=png&color=FFFFFF"; // Half Moon for dark mode
             }
         });
+
+        // Function to clear dark-mode state
+        function clearDarkModeState() {
+            sessionStorage.removeItem('darkMode');
+        }
+
+        window.addEventListener('load', function () {
+            if (sessionStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
         // Sortable Table Functionality
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.styled-table th').forEach(function (th) {
@@ -726,11 +737,7 @@
 
         function logout() {
             // Clear the active section
-            localStorage.removeItem('activeSection');
-
-            // Proceed with your existing logout logic
-            // Example: Redirect to login page
-            window.location.href = 'login.aspx';
+            sessionStorage.removeItem('activeSection');
         }
 
         // Function to show the pop-up
