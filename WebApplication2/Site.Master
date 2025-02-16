@@ -15,17 +15,22 @@
             var sidebar = document.getElementById("sidebar");
             if (sidebar) {
                 // Restore scroll position
-                var scrollPosition = localStorage.getItem("sidebarScrollPosition");
+                var scrollPosition = sessionStorage.getItem("sidebarScrollPosition");
                 if (scrollPosition) {
                     sidebar.scrollTop = scrollPosition;
                 }
 
                 // Save scroll position
-                sidebar.addEventListener("scroll", function() {
-                    localStorage.setItem("sidebarScrollPosition", sidebar.scrollTop);
+                sidebar.addEventListener("scroll", function () {
+                    sessionStorage.setItem("sidebarScrollPosition", sidebar.scrollTop);
                 });
             }
         });
+
+        // Function to clear scroll position
+        function clearScrollPosition() {
+            sessionStorage.removeItem("sidebarScrollPosition");
+        }
     </script>
 </head>
 <body>
@@ -39,7 +44,7 @@
                     <div>
                         <asp:ContentPlaceHolder ID="Header" runat="server" />
                     </div>
-                    <a href="/Pages/Login/Login.aspx" class="back-button">Logout</a>
+                    <a href="/Pages/Login/Login.aspx" onclick="clearScrollPosition();" class="back-button">Logout</a>
                 </div>
                 <div class="content">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server" />
