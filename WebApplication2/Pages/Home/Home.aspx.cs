@@ -13,10 +13,13 @@ namespace WebApplication2.Pages.Home
         {
             if (Session["adminID"] == null)
             {
-                // Redirect to the login page if not authenticated
+                Response.Write("Session is null. Redirecting...");
                 Response.Redirect("/Pages/Login/Login.aspx");
             }
-
+            else
+            {
+                Response.Write("Session exists. AdminID: " + Session["adminID"]);
+            }
         }
     }
 }
