@@ -69,9 +69,15 @@
             margin-top: 10px;
         }
 
-        .login-container input[type="submit"]:hover,
+        /*.login-container input[type="submit"]:hover,*/
         .login-container .login-button:hover {
             background-color: #6a11cb;
+        }
+
+        .login-container .login-button:disabled {
+            background-color: #2575fc; /* Original color */
+            filter: brightness(0.8); /* Darkens the button */
+            cursor: not-allowed;
         }
 
         .forgot-password {
@@ -86,7 +92,7 @@
         }
 
         .error-message {
-            color: #6a11cb;
+            color: #2e4c5d;
             font-size: 14px;
             margin-top: 10px;
         }
@@ -144,14 +150,14 @@
     <form id="form1" runat="server" class="login-container">
             <h2>Customer Login</h2>
             <!-- Mobile Number Field -->
-            <asp:TextBox ID="mnumber" runat="server" placeholder="Mobile Number" type="text"></asp:TextBox>
+            <asp:TextBox ID="mnumber" runat="server" placeholder="Mobile Number" type="text" onkeyup="validateForm()"></asp:TextBox>
 
             <!-- Password Field -->
-            <asp:TextBox ID="password" runat="server" placeholder="Password" type="password"></asp:TextBox>
+            <asp:TextBox ID="password" runat="server" placeholder="Password" type="password" onkeyup="validateForm()"></asp:TextBox>
 
             <!-- Login Button -->
             <div>
-            <asp:Button ID="buttonlogin" runat="server" onclick="loginm" Text="Login" CssClass="login-button" />
+                <asp:Button ID="buttonlogin" runat="server" onclick="loginm" Text="Login" CssClass="login-button" Enabled="false" />
             </div>
             <br />
             <div>
@@ -188,5 +194,21 @@
             showPopup();
         }
     }
+
+    // Function to validate the form
+    function validateForm() {
+        var mnumber = document.getElementById('<%= mnumber.ClientID %>').value;
+    var password = document.getElementById('<%= password.ClientID %>').value;
+        var buttonlogin = document.getElementById('<%= buttonlogin.ClientID %>');
+
+        if (mnumber.trim() !== "" && password.trim() !== "") {
+            buttonlogin.disabled = false;
+            buttonlogin.style.cursor = 'pointer';
+        } else {
+            buttonlogin.disabled = true;
+            buttonlogin.style.cursor = 'not-allowed';
+        }
+    }
+
 </script>
 </html>

@@ -58,6 +58,12 @@
             background: #D81B60; 
         }
 
+        .login-button:disabled {
+        background-color: #E91E63; /* Original color */
+        filter: brightness(0.8);
+        cursor: not-allowed;
+        }
+
         .error-message {
             color: #E91E63;
             font-size: 14px;
@@ -137,11 +143,11 @@
 <body>
     <form id="form1" runat="server" class="login-container">
         <h2>Admin Login</h2>
-        <input id="txtUsername" runat="server" type="text" placeholder="AdminID" />
+        <input id="txtUsername" runat="server" type="text" placeholder="AdminID" onkeyup="validateForm()" />
         <br />
-        <input id="txtPassword" runat="server" type="password" placeholder="Password" />
+        <input id="txtPassword" runat="server" type="password" placeholder="Password" onkeyup="validateForm()" />
         <br />
-        <asp:Button ID="btnLogin" runat="server" CssClass="login-button" Text="Login" OnClick="LoginButton" />
+        <asp:Button ID="btnLogin" runat="server" CssClass="login-button" Text="Login" OnClick="LoginButton" Enabled="false" />
         <div>
         <asp:Label ID="lblError" runat="server" CssClass="error-message"></asp:Label>
         </div>
@@ -175,6 +181,21 @@
         // Check if the user is visiting for the first time in this session
         if (!sessionStorage.getItem('closedAdmin')) {
             showPopup();
+        }
+    }
+
+    // Function to validate the form
+    function validateForm() {
+        var txtUsername = document.getElementById('<%= txtUsername.ClientID %>').value;
+        var txtPassword = document.getElementById('<%= txtPassword.ClientID %>').value;
+        var buttonlogin = document.getElementById('<%= btnLogin.ClientID %>');
+
+        if (txtUsername.trim() !== "" && txtPassword.trim() !== "") {
+            btnLogin.disabled = false;
+            btnLogin.style.cursor = 'pointer';
+        } else {
+            btnLogin.disabled = true;
+            btnLogin.style.cursor = 'not-allowed';
         }
     }
 </script>
