@@ -14,7 +14,11 @@ namespace WebApplication2.Pages.PaymentPoints
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["adminID"] == null)
+            {
+                // Redirect to the login page if not authenticated
+                Response.Redirect("/Pages/Login/Login.aspx");
+            }
         }
         private void LoadData(string mobileNum) // Accept mobile number as parameter
         {

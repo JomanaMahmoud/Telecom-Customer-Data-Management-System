@@ -41,6 +41,18 @@
     function clearScrollPosition() {
         sessionStorage.removeItem("sidebarScrollPosition");
     }
+
+    function logout() {
+        // Clear the session variable
+        sessionStorage.clear();
+        // Send a POST request to the logout endpoint
+        fetch('logout.aspx', { method: 'POST' })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                }
+            });
+    }
 </script>
 </head>
 <body>
@@ -54,7 +66,7 @@
                     <div>
                         <asp:ContentPlaceHolder ID="Header" runat="server" />
                     </div>
-                    <a href="/Pages/Login/Login.aspx" onclick="clearScrollPosition();" class="back-button">Logout</a>
+                    <a href="/Pages/Login/Login.aspx" onclick="clearScrollPosition(); logout();" class="back-button">Log Out</a>
                 </div>
                 <div class="content">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server" />

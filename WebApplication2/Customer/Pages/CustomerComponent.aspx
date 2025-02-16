@@ -736,9 +736,17 @@
         });
 
         function logout() {
-            // Clear the active section
-            sessionStorage.removeItem('activeSection');
+            // Clear the session variable
+            sessionStorage.clear();
+            // Send a POST request to the logout endpoint
+            fetch('logout.aspx', { method: 'POST' })
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                });
         }
+
 
         // Function to show the pop-up
         function showPopup() {

@@ -10,7 +10,11 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // You can handle any additional logic on page load if needed
+            if (Session["adminID"] == null)
+            {
+                // Redirect to the login page if not authenticated
+                Response.Redirect("/Pages/Login/Login.aspx");
+            }
         }
 
         protected void ButtonFetchOffers_Click(object sender, EventArgs e)

@@ -35,8 +35,6 @@ namespace WebApplication2
             string accountmn = mnumber.Text.Trim();
             string pass = password.Text.Trim();
 
-            Session["accountmn"]= accountmn;
-
             // Validate inputs
             if (string.IsNullOrEmpty(accountmn) || string.IsNullOrEmpty(pass))
             {
@@ -44,8 +42,6 @@ namespace WebApplication2
                 password.Text = "";
                 return;
             }
-
-            
 
             try
             {   // Open connection

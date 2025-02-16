@@ -14,6 +14,12 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["adminID"] == null)
+            {
+                // Redirect to the login page if not authenticated
+                Response.Redirect("/Pages/Login/Login.aspx");
+            }
+
             if (!IsPostBack)
             {
                 // Bind the data to the GridView when the page loads

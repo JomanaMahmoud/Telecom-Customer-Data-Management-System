@@ -10,9 +10,10 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["adminID"] == null)
             {
-                // Initialize the page if needed
+                // Redirect to the login page if not authenticated
+                Response.Redirect("/Pages/Login/Login.aspx");
             }
         }
 

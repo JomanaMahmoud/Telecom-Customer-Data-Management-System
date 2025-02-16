@@ -16,12 +16,18 @@ namespace Milestone_3
             {
                 string connStr = WebConfigurationManager.ConnectionStrings["Milestone2DB_24"].ToString();
                 // Example input values, replace with actual inputs from user or session
-                MobileNo = Session["accountmn"] as String;
-                //int NationalID = 2; // Example NationalID
-                string PlanName = "Splan1"; // Example PlanName
-
-                //// ShowConsoleMessage("Retrieving all active benefits...");
-                 ShowAllServicePlans(connStr);
+                
+                if (Session["accountmn"] == null)
+                {
+                    // Redirect to the login page if not authenticated
+                    Response.Redirect("/Customer/Pages/login.aspx");
+                }
+                else 
+                {
+                    MobileNo = Session["accountmn"] as String;
+                }
+                // ShowConsoleMessage("Retrieving all active benefits...");
+                ShowAllServicePlans(connStr);
                  ShowAllBenefits(connStr);
                  ShowAllShops(connStr);
                  ShowCompanyOfferedPlans(connStr, MobileNo);
