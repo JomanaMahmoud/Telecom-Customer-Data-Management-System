@@ -10,28 +10,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="~/Styles/site.css" />
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var sidebar = document.getElementById("sidebar");
-            if (sidebar) {
-                // Restore scroll position
-                var scrollPosition = sessionStorage.getItem("sidebarScrollPosition");
-                if (scrollPosition) {
-                    sidebar.scrollTop = scrollPosition;
-                }
-
-                // Save scroll position
-                sidebar.addEventListener("scroll", function () {
-                    sessionStorage.setItem("sidebarScrollPosition", sidebar.scrollTop);
-                });
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar) {
+            // Restore scroll position
+            var scrollPosition = sessionStorage.getItem("sidebarScrollPosition");
+            if (scrollPosition) {
+                sidebar.scrollTop = scrollPosition;
             }
-        });
 
-        // Function to clear scroll position
-        function clearScrollPosition() {
-            sessionStorage.removeItem("sidebarScrollPosition");
+            // Save scroll position
+            sidebar.addEventListener("scroll", function () {
+                sessionStorage.setItem("sidebarScrollPosition", sidebar.scrollTop);
+            });
+
+            // Scroll to the active button if not visible
+            var activeButton = sidebar.querySelector("li.active a");
+            if (activeButton) {
+                var rect = activeButton.getBoundingClientRect();
+                var sidebarRect = sidebar.getBoundingClientRect();
+                if (rect.top < sidebarRect.top || rect.bottom > sidebarRect.bottom) {
+                    activeButton.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+            }
         }
-    </script>
+    });
+
+    // Function to clear scroll position
+    function clearScrollPosition() {
+        sessionStorage.removeItem("sidebarScrollPosition");
+    }
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
