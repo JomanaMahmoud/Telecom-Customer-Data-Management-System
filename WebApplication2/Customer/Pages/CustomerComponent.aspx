@@ -669,16 +669,16 @@
             const icon = document.getElementById('modeIcon');
             if (body.classList.contains('dark-mode')) {
                 icon.src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
-                sessionStorage.setItem('darkMode', 'true'); // Save dark mode state
+                localStorage.setItem('darkMode', 'true'); // Save dark mode state
             } else {
                 icon.src = "https://img.icons8.com/?size=100&id=59841&format=png&color=FFFFFF"; // Half Moon for dark mode
-                sessionStorage.removeItem('darkMode'); // Remove dark mode state
+                localStorage.removeItem('darkMode'); // Remove dark mode state
             }
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            // Check if dark mode is enabled in sessionStorage
-            if (sessionStorage.getItem("darkMode") === "true") {
+            // Check if dark mode is enabled in localStorage
+            if (localStorage.getItem("darkMode") === "true") {
                 document.body.classList.add("dark-mode");
                 document.body.classList.remove("light-mode");
                 document.getElementById('modeIcon').src = "https://img.icons8.com/?size=100&id=83221&format=png&color=FAB005"; // Sun for light mode
@@ -691,13 +691,18 @@
 
         // Function to clear dark-mode state
         function clearDarkModeState() {
-            sessionStorage.removeItem('darkMode');
+            localStorage.removeItem('darkMode');
         }
 
         window.addEventListener('load', function () {
-            if (sessionStorage.getItem('darkMode') === 'enabled') {
+            if (localStorage.getItem('darkMode') === 'enabled') {
                 document.body.classList.add('dark-mode');
             }
+        });
+
+        // Clear localStorage on window close
+        window.addEventListener("beforeunload", function () {
+            localStorage.clear();
         });
 
         // Sortable Table Functionality
@@ -738,7 +743,7 @@
         function logout() {
             // Clear the session variable
             localStorage.removeItem('activeSection');
-            sessionStorage.clear();
+            localStorage.clear();
             // Send a POST request to the logout endpoint
             fetch('logout.aspx', { method: 'POST' })
                 .then(response => {
