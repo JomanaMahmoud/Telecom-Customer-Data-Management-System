@@ -189,6 +189,7 @@
 
     // Show the pop-up when the page loads
     window.onload = function () {
+        localStorage.clear();
         // Check if the user is visiting for the first time in this session
         if (!sessionStorage.getItem('closedCustomerLogin')) {
             showPopup();

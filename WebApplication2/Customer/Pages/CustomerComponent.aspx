@@ -606,6 +606,7 @@
        <asp:TextBox ID="TextBoxNationalID" runat="server" Placeholder="Enter your National ID" CssClass="styled-textbox"></asp:TextBox>
        <asp:Button ID="ButtonFetchCashback" runat="server" Text="Fetch" 
                 OnClick="btnSubmit_Cashback" CssClass="styled-button" />
+        <br />
         <asp:Label ID="lblCashbackStatus" runat="server"></asp:Label>
     </div>
      <div class="content" id="remainingExtraAmount">
@@ -700,11 +701,6 @@
             }
         });
 
-        // Clear localStorage on window close
-        window.addEventListener("beforeunload", function () {
-            localStorage.clear();
-        });
-
         // Sortable Table Functionality
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.styled-table th').forEach(function (th) {
@@ -742,7 +738,6 @@
 
         function logout() {
             // Clear the session variable
-            localStorage.removeItem('activeSection');
             localStorage.clear();
             // Send a POST request to the logout endpoint
             fetch('logout.aspx', { method: 'POST' })
