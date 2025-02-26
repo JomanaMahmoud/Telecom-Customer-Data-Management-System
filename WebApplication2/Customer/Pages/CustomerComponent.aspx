@@ -410,7 +410,7 @@
         .hint-popup {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 30px;
             width: 300px;
             background-color: #fff;
             border: 1px solid #ccc;
