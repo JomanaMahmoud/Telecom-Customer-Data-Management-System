@@ -51,7 +51,8 @@
         }
 
         header .nav-links {
-            margin-left: 400px;
+            margin-left: auto;
+            margin-right: 25px;
             display: flex;
             gap: 20px;
             justify-content: flex-end;
@@ -159,7 +160,7 @@
             margin-bottom: 20px;
             color: #606060; 
         }
-         .dark-mode  .content h2 {
+        .dark-mode  .content h2 {
             font-size: 26px;
             font-weight: 600;
             margin-bottom: 20px;
